@@ -5,26 +5,44 @@
 
 using namespace std;
 
+Complejo::Complejo(float r, float i){
+  re = r;
+  im = i;
+}
 
-float Complex::norma(){
+void Complejo::asignar(float r, float i){
+  re = r;
+  im = i;
+}
+
+float Complejo::real(){
+  return re;
+}
+
+float Complejo::imag(){
+  return im;
+}
+
+float Complejo::norma(){
   return sqrt(re*re + im*im);
 }
 
-float Complex::angulo(){
-  return atan2(a.im,a.re);
+float Complejo::angulo(){
+  return atan2(im, re);
 }
 
-Complex Complex::operator+(Complex &a ){
-  Complex c;
-  c.re = a.re + b.re;
-  c.im = a.im + b.im;
+Complejo Complejo::operator+(Complejo &a ){
+  Complejo c;
+  c.re = re + a.re;
+  c.im = im + a.im;
   return c;
 }
 
-Complex Complex::operator-(Complex &a ){
-  Complex c;
-  c.re =  a.re - b.re;
-  c.im = a.im - b.im;
+Complejo Complejo::operator-(Complejo &a ){
+  Complejo c;
+  c.re = re - a.re;
+  c.im = im - a.im;
   return c;
 }
+
 

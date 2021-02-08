@@ -9,32 +9,33 @@ int main( int argc, char** argv ){
 
   // Recordar que la parte real e imaginaria será pasado por parámetros del main.
 
-  Complex com, com2, comS;
-  Complex *ptr, *ptr1;
-  ptr = new Complex();
-  ptr->re = 46.67;
-  ptr->im = 34.21;
+  Complejo com, com2, comS;
+  Complejo *ptr, *ptr1;
+  ptr = new Complejo(46.67, 34.21);
 
-  ptr1 = new Complex();
-  ptr1->re = 11.22;
-  ptr1->im = 22.11;
+  ptr1 = new Complejo(11.22, 22.11 );
 
-  float nor, ang;
-  com.re = atof( argv[1] );
-  com.im = atof( argv[2] );
-  com2.re = atof( argv[3] );
-  com2.im = atof( argv[4] );
+  float nor, ang, a, b;
+  a = atof( argv[1] );
+  b = atof( argv[2] );
+  
+  com.asignar(a, b);
 
-  nor = norma( com );
-  ang = angulo( com );
+  a = atof( argv[3] );
+  b = atof( argv[4] );
 
-  comS = suma(com, com2);
-  cout << "El número complejo: "  << comS.re << " + " << comS.im << "j" ;
+  com2.asignar(a, b);
+
+  nor = com.norma();
+  ang = com.angulo();
+
+  comS = com + com2;
+  cout << "El número complejo: "  << comS.real() << " + " << comS.imag() << "j" ;
   cout << " tiene de norma= " << nor << " y un ángulo= " << ang << " rad." << endl;
-  cout << "Otro número: " << ptr->re  << " + " << ptr->im << "j " << endl;
+  cout << "Otro número: " << ptr->real()  << " + " << ptr->imag() << "j " << endl;
 
-  comS = resta( *ptr, *ptr1 );
-  cout << "La resta compleja: "  << comS.re << " + " << comS.im << "j" ;
+  comS = *ptr - *ptr1 ;
+  cout << "La resta compleja: "  << comS.real() << " + " << comS.imag() << "j" << endl;
  
 
  return 0;

@@ -4,15 +4,20 @@
 
 using namespace std;
 
-class Complex{
+class Complejo{
   float re;
   float im;
 
  public:
+  Complejo(float r = 0., float i = 0.);
+  void asignar(float r, float i);
+  float real();
+  float imag();
   float norma();
   float angulo();
-  Complex operator+(Complex &a);
-  Complex operator-(Complex &a);
+
+  Complejo operator+(Complejo &a);
+  Complejo operator-(Complejo &a);
 };
 
 
