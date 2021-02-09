@@ -45,4 +45,8 @@ Complejo Complejo::operator-(Complejo &a ){
   return c;
 }
 
+ostream& operator<<(ostream &o, Complejo &a){
+    o << a.re << " + " << a.im << "j";
+}
+
 

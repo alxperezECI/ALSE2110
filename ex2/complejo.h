@@ -18,6 +18,6 @@ class Complejo{
 
   Complejo operator+(Complejo &a);
   Complejo operator-(Complejo &a);
+  friend ostream& operator<<(ostream &o, Complejo &a);
 };
-
 

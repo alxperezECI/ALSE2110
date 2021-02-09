@@ -30,12 +30,12 @@ int main( int argc, char** argv ){
   ang = com.angulo();
 
   comS = com + com2;
-  cout << "El número complejo: "  << comS.real() << " + " << comS.imag() << "j" ;
+  cout << "El número complejo: "  << comS << endl;
   cout << " tiene de norma= " << nor << " y un ángulo= " << ang << " rad." << endl;
-  cout << "Otro número: " << ptr->real()  << " + " << ptr->imag() << "j " << endl;
+  cout << "Otro número: " << *ptr << endl;
 
   comS = *ptr - *ptr1 ;
-  cout << "La resta compleja: "  << comS.real() << " + " << comS.imag() << "j" << endl;
+  cout << "La resta compleja: "  << comS << endl;
  
 
  return 0;
