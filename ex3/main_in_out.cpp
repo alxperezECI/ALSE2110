@@ -11,7 +11,7 @@ int main(int argc, char* argv[]){
   string filename = "";
   string output = "";
 
-  if( argc > 1 && argc < 4 ){
+  if( argc > 2 && argc < 4 ){
     filename = argv[1];
     output = argv[2];
   }else{

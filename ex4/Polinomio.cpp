@@ -162,7 +162,7 @@ Polinomio Polinomio::operator /(float f){
     return c;
 }
 
-std::ostream &operator <<(std::ostream &stream, Polinomio &p){
+std::ostream& operator<<(std::ostream &stream, Polinomio &p){
     //cout << "entrando <<" << std::endl;
     return stream << p.getString();
 }

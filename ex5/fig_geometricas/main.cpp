@@ -15,9 +15,9 @@ int main(){
     Circulo b(3., 10., 0.);
     cout << b << endl;
 
-    cout << "Estos círculos " << ( a.intersectan(b) ? "si ": "no " ) << "instersectan" << endl;
+    cout << "Estos círculos " << ( a.intersectan(b) ? "si ": "no " ) << "se intersectan" << endl;
 	
-	Cuadrado c( 9.5 );
+    Cuadrado c(9.5);
 	cout << c << endl;
     c.setLado( 17. );
     cout << c << endl;
