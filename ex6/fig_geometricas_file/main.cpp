@@ -33,20 +33,20 @@ int main(int argc, char** argv){
 
         while( getline(archivo, path) ){
             posicion = path.find(" ", posicion);
-            cout << path << "-> " << posicion <<endl;
+            //cout << path << "-> " << posicion <<endl;
             tipo = atoi(path.substr(0, posicion).c_str());
             switch (tipo) {
             case circulo:
-                pG = new Circulo(path.substr(posicion + 1));
+                pG = new Circulo( path.substr(posicion + 1) );
                 break;
             case cuadrado:
-                pG = new Cuadrado(path.substr(posicion + 1));
+                pG = new Cuadrado( path.substr(posicion + 1) );
                 break;
             case triangulo:
-                pG = new Triangulo(path.substr(posicion + 1));
+                pG = new Triangulo( path.substr(posicion + 1) );
                 break;
             case pentagono:
-                pG = new Pentagono(path.substr(posicion + 1));
+                pG = new Pentagono( path.substr(posicion + 1) );
                 break;
             default:
                 break;
@@ -61,6 +61,7 @@ int main(int argc, char** argv){
     for(int i = 0; i < vFig.size() ; ++i ){
         cout << "El área es: " << vFig[i]->area() << endl;
         cout << *(vFig[i]) << endl;
+        cout << vFig[i]->queSoy() << endl << endl;
     }
 
     // NO olvidar destruir la memoria dinámica creada

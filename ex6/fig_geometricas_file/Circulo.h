@@ -7,20 +7,17 @@
 #define _CIRCULO_H
 
 #include "Geometrica.h"
+#include <string>
 
 
 class Circulo: public Geometrica {
 
 public: 	
-    /**
-     * @param r
-     * @param x
-     * @param y
-     */
     Circulo(float r, float x = 0., float y = 0.);
     Circulo(string parametros);
     float area();
     float perimetro();
+    std::string queSoy();
     friend ostream& operator<<(ostream& stream, Circulo& c);
 
     void setRadio(float r){_radio = r;}

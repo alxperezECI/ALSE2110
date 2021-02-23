@@ -6,6 +6,7 @@
 #ifndef _GEOMETRICA_H
 #define _GEOMETRICA_H
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -23,11 +24,10 @@ public:
 
     virtual float perimetro();
 
+    virtual string queSoy();
+
     //virtual bool intersecta(Geometrica& g);
 
-    /**
-     * @param stream
-     */
     friend ostream& operator<<(ostream& stream, Geometrica& g);
 
     void setX(float x){_xc = x;}
@@ -36,16 +36,26 @@ public:
     float getY(){return _yc;}
     void setAngulo(float a){_angulo = a;}
     float getAngulo(){return _angulo;}
-    void setTipo(fig_G t){_idTipo = t;};
-    fig_G getTipo(){return _idTipo;};
+    void setTipo(fig_G t){_idTipo = t;}
+    fig_G getTipo(){return _idTipo;}
 
     Geometrica();
     ~Geometrica();
 
+    float getArea() {return _area;}
+    void setArea(float area){ _area = area; }
+
+    float getPerimetro(){return _perimetro;}
+    void setPerimetro(float perimetro){_perimetro = perimetro;}
+
 protected:
-	float _xc;
-	float _yc;
-	float _angulo;
+    float _xc;
+    float _yc;
+    float _angulo;
+
+    float _area;
+    float _perimetro;
+
     fig_G _idTipo;
 };
 

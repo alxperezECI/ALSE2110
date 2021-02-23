@@ -36,7 +36,7 @@ Pentagono::Pentagono(string parametros) {
     pos_ant =  posicion + 1;
     posicion = parametros.find(" ",pos_ant);
     setAngulo( atof(parametros.substr(0,posicion).c_str()) );
-    pos_ant =  posicion + 1;
+    cout << "Pentágono de L: " << _lado << ", Xc: " << _xc << ", Yc: " << _yc << ", Ángulo: " << _angulo << endl;
 }
 
 Pentagono::Pentagono() {
