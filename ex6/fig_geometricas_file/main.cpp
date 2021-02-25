@@ -61,6 +61,11 @@ int main(int argc, char** argv){
     for(int i = 0; i < vFig.size() ; ++i ){
         cout << "El área es: " << vFig[i]->area() << endl;
         cout << *(vFig[i]) << endl;
+        //cout << vFig[i]->getTipo() << endl;
+        if ( vFig[i]->getTipo() == fig_G::circulo){
+            Circulo *ptr = (Circulo*) vFig[i];
+            cout << *ptr << endl;
+        }
         cout << vFig[i]->queSoy() << endl << endl;
     }
 

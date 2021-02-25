@@ -7,6 +7,7 @@
 
 Cuadrado::Cuadrado(float l, float x, float y) {
     _lado = l;
+    _idTipo =  cuadrado;
     setX( x );
     setY( y );
     setTipo( cuadrado );
@@ -28,6 +29,8 @@ Cuadrado::Cuadrado(string parametros){
     posicion = parametros.find(" ",pos_ant);
     setAngulo( atof(parametros.substr(pos_ant,posicion).c_str()) );
     cout << "Cuadrado de L: " << _lado << ", Xc: " << _xc << ", Yc: " << _yc << ", Ángulo: " << _angulo << endl;
+     _area = _perimetro = 0.;
+     _idTipo =  cuadrado;
 }
 
 Cuadrado::Cuadrado() {

@@ -21,7 +21,8 @@ string Geometrica::queSoy(){
 }
 
 ostream& operator<<(ostream& stream, Geometrica& g) {
-    cout << "llamada a operador << de Geométrica" ;
+    //cout << "llamada a operador << de Geométrica" << endl;
+    cout << g.queSoy();
     return stream   ;
 }
 

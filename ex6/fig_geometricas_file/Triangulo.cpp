@@ -22,6 +22,8 @@ Triangulo::Triangulo(float b, float h, float x, float y) {
     setX( x );
     setY( y );
     setTipo( triangulo );
+    _area = _perimetro = 0.;
+    _idTipo =  triangulo;
 }
 
 Triangulo::Triangulo(string parametros) {
@@ -42,6 +44,8 @@ Triangulo::Triangulo(string parametros) {
     posicion = parametros.find( " ", pos_ant );
     setAngulo( atof(parametros.substr(0,posicion).c_str()) );
     cout << "Triángulo de B: " << _base << ", h: " << _altura << ", Xc: " << _xc << ", Yc: " << _yc << ", Ángulo: " << _angulo << endl;
+    _area = _perimetro = 0.;
+    _idTipo =  triangulo;
 }
 
 Triangulo::Triangulo() {

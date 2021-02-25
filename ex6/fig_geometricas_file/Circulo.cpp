@@ -11,10 +11,12 @@ Circulo::Circulo(float r, float x, float y) {
     _xc = x ;
     _yc = y ;
     _idTipo =  circulo ;
+    _area = _perimetro = 0.;
 }
 
 Circulo::Circulo(string parametros){
     // cout << "Circulo: " << parametros << endl;
+    _idTipo =  circulo ;
     size_t posicion = 0;
     size_t pos_ant = 0;
     posicion = parametros.find(" ");
@@ -29,6 +31,7 @@ Circulo::Circulo(string parametros){
     posicion = parametros.find(" ",pos_ant);
     _angulo = atof(parametros.substr(pos_ant,posicion).c_str());
     cout << "Círculo de R: " << _radio << ", Xc: " << _xc << ", Yc: " << _yc << ", Ángulo: " << _angulo << endl;
+    _area = _perimetro = 0.;
 }
 
 Circulo::Circulo() {
@@ -36,7 +39,7 @@ Circulo::Circulo() {
 }
 
 float Circulo::area(){
-    if( _area == 0 ) M_PI * _radio * _radio;
+    if( _area == 0. ) _area = M_PI * _radio * _radio;
     return _area;
 }
 

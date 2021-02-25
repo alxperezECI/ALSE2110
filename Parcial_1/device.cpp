@@ -5,13 +5,13 @@
 using namespace std;
 
 Device::Device(){
-    _x =_y = _temp = 0.;
+    _x = _y = _temp = 0.;
 }
 
 Device::Device(double x, double y, double temp){
     _x = x;
     _y = y;
-    temp = _temp;
+    _temp = temp;
 }
 
 void Device::leerCoordenadas(){
@@ -40,13 +40,11 @@ bool Device::alerta(Device &d){
 
     if ( dx == 0. )return false;
 
-    if( dx < 3 && d._temp >= 38 )
-
     if( dx < 3 ){
         if( d._temp >= 38 )
             return true;
         else
-            if( d._temp > 36 && dx <= 2)
+            if( d._temp > 36.5 && dx <= 2)
                 return true;
     }
     return false;
@@ -59,4 +57,5 @@ void Device::vibrar(){
 
 void Device::esperar(){
     // Aqui hay que contar el tiempo que falta para ajustar 400 ms.
+
 }

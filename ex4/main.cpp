@@ -1,7 +1,7 @@
 #include "Polinomio.h"
 
 int main(int argc, char** argv){
-    Polinomio a("3W^2+5");
+    Polinomio a("3X^2+5");
     Polinomio b("6X^2+8X^3-7");
     std::cout << a << std::endl;
     std::cout << b << std::endl;
