@@ -5,16 +5,6 @@
 
 #include "Cuadrado.h"
 
-/**
- * Cuadrado implementation
- */
-
-
-/**
- * @param l
- * @param x
- * @param y
- */
 Cuadrado::Cuadrado(float l, float x, float y) {
     _lado = l;
     setX( x );
@@ -23,20 +13,21 @@ Cuadrado::Cuadrado(float l, float x, float y) {
 }
 
 Cuadrado::Cuadrado(string parametros){
+    // 32.2 -65.2 -42.1 30.0   ... Lado xc yc angulo
     size_t posicion = 0;
     size_t pos_ant = 0;
     posicion = parametros.find(" ");
-    _lado = atof(parametros.substr(0,posicion).c_str());
+    _lado = atof(parametros.substr(pos_ant,posicion).c_str());
     pos_ant =  posicion + 1;
     posicion = parametros.find(" ",pos_ant);
-    setX( atof(parametros.substr(0,posicion).c_str()) );
+    setX( atof(parametros.substr(pos_ant,posicion).c_str()) );
     pos_ant =  posicion + 1;
     posicion = parametros.find(" ",pos_ant);
-    setY( atof(parametros.substr(0,posicion).c_str()) );
+    setY( atof(parametros.substr(pos_ant,posicion).c_str()) );
     pos_ant =  posicion + 1;
     posicion = parametros.find(" ",pos_ant);
-    setAngulo( atof(parametros.substr(0,posicion).c_str()) );
-    pos_ant =  posicion + 1;
+    setAngulo( atof(parametros.substr(pos_ant,posicion).c_str()) );
+    cout << "Cuadrado de L: " << _lado << ", Xc: " << _xc << ", Yc: " << _yc << ", Ángulo: " << _angulo << endl;
 }
 
 Cuadrado::Cuadrado() {
@@ -49,5 +40,9 @@ float Cuadrado::area(){
 
 float Cuadrado::perimetro(){
     return 4 * _lado;
+}
+
+string Cuadrado::queSoy(){
+    return "Soy un cuadrado";
 }
 

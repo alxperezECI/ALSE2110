@@ -10,26 +10,20 @@
 
 
 class Cuadrado: public Geometrica {
-public: 
-	
-/**
- * @param l
- * @param x
- * @param y
- */
-Cuadrado(float l, float x = 0., float y = 0.);
-Cuadrado(string parametros);
+  public:
+    Cuadrado(float l, float x = 0., float y = 0.);
+    Cuadrado(string parametros);
 
-float area();
-float perimetro();
+    float area();
+    float perimetro();
+    string queSoy();
+    void setLado(float l){ _lado = l;}
+    float getLado(){ return _lado;}
 
-void setLado(float l){ _lado = l;}
-float getLado(){ return _lado;}
-
-private: 
+  private:
 	float _lado;
 	
-Cuadrado();
+    Cuadrado();
 };
 
 #endif //_CUADRADO_H

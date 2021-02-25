@@ -10,16 +10,10 @@
 
 
 class Pentagono: public Geometrica {
-public: 
-	
-    /**
-     * @param l
-     * @param x
-     * @param y
-     */
+  public:
     Pentagono(float l, float x, float y);
     Pentagono(string parametros);
-private: 
+  private:
 	float _lado;
 	
     Pentagono();

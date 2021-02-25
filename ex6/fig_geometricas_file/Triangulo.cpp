@@ -41,7 +41,7 @@ Triangulo::Triangulo(string parametros) {
     pos_ant =  posicion + 1;
     posicion = parametros.find( " ", pos_ant );
     setAngulo( atof(parametros.substr(0,posicion).c_str()) );
-    pos_ant =  posicion + 1;
+    cout << "Triángulo de B: " << _base << ", h: " << _altura << ", Xc: " << _xc << ", Yc: " << _yc << ", Ángulo: " << _angulo << endl;
 }
 
 Triangulo::Triangulo() {

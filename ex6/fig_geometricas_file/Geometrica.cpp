@@ -8,31 +8,20 @@
 
 using namespace std;
 
-/**
- * Geometrica implementation
- */
-
-
-/**
- * @return float
- */
 float Geometrica::area() {
     return 0.0;
 }
 
-/**
- * @return float
- */
 float Geometrica::perimetro() {
     return 0.0;
 }
 
-/**
- * @param stream
- * @return ostream&
- */
+string Geometrica::queSoy(){
+  return "Soy una figura geométrica";
+}
+
 ostream& operator<<(ostream& stream, Geometrica& g) {
-    cout << "llamada a operador" << endl ;
+    cout << "llamada a operador << de Geométrica" ;
     return stream   ;
 }
 
@@ -41,5 +30,7 @@ Geometrica::Geometrica() {
 }
 
 Geometrica::~Geometrica(){
-    cout << "Llamando destructor de Geometrica" << endl;
+    cout << "Llamando destructor de Geométrica" << endl;
 }
+
+
