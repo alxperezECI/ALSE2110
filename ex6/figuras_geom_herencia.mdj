@@ -1070,7 +1070,7 @@
 											"top": 62,
 											"width": 350,
 											"height": 13,
-											"text": "-_xc: float",
+											"text": "#_xc: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1087,7 +1087,7 @@
 											"top": 77,
 											"width": 350,
 											"height": 13,
-											"text": "-_yc: float",
+											"text": "#_yc: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1104,7 +1104,7 @@
 											"top": 92,
 											"width": 350,
 											"height": 13,
-											"text": "-_angulo: float",
+											"text": "#_angulo: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1121,7 +1121,7 @@
 											"top": 107,
 											"width": 350,
 											"height": 13,
-											"text": "-_area: float",
+											"text": "#_area: float",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1138,7 +1138,7 @@
 											"top": 122,
 											"width": 350,
 											"height": 13,
-											"text": "-_perimetro: float",
+											"text": "#_perimetro: float",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2057,7 +2057,7 @@
 										"$ref": "AAAAAAFoyuniidm4HYE="
 									},
 									"name": "_xc",
-									"visibility": "private",
+									"visibility": "protected",
 									"type": "float"
 								},
 								{
@@ -2067,7 +2067,7 @@
 										"$ref": "AAAAAAFoyuniidm4HYE="
 									},
 									"name": "_yc",
-									"visibility": "private",
+									"visibility": "protected",
 									"type": "float"
 								},
 								{
@@ -2077,7 +2077,7 @@
 										"$ref": "AAAAAAFoyuniidm4HYE="
 									},
 									"name": "_angulo",
-									"visibility": "private",
+									"visibility": "protected",
 									"type": "float"
 								},
 								{
@@ -2087,7 +2087,7 @@
 										"$ref": "AAAAAAFoyuniidm4HYE="
 									},
 									"name": "_area",
-									"visibility": "private",
+									"visibility": "protected",
 									"type": "float"
 								},
 								{
@@ -2097,7 +2097,7 @@
 										"$ref": "AAAAAAFoyuniidm4HYE="
 									},
 									"name": "_perimetro",
-									"visibility": "private",
+									"visibility": "protected",
 									"type": "float"
 								}
 							],
