@@ -34,6 +34,7 @@ void Filtro::agregarDato(float a) {
 float Filtro::promedio() {
     float prom =0.;
     std::list<float>::iterator it;
+
     if( _datos.empty() ) return 0.;
     for( it = _datos.begin(); it != _datos.end(); ++it )
         prom += *it;

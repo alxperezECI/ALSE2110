@@ -3,11 +3,9 @@
 #include "Filtro.h"
 
 using namespace std;
-#define N 9
 
-int main(int argc, char** argv)
-{
-    cout << "Probando un filtro de media de tamaño " << N <<"." << endl;
+int main(int argc, char** argv){
+    int _ventana = 9;
 
     // El problema es abrir un archivo y guardar los resultados en otro.
     // Primero habro el archivo. Asumo que la ruta será pasado por la consola.
@@ -17,6 +15,9 @@ int main(int argc, char** argv)
         cout << "The file with the output will be placed in the same folder." << endl;
         return -1;
     }
+
+    if(argc == 3 ) _ventana = atoi( argv[2] );
+    cout << "Probando un filtro de media de tamaño " << _ventana <<"." << endl;
 
     string path = argv[1];
     ifstream archivo;
@@ -33,7 +34,7 @@ int main(int argc, char** argv)
         cout << "los datos de salida irán al archivo: output.txt";
         if( archSal.is_open() ){
             cout << " ...... ...... archivo abierto" << endl;
-            Filtro filtro(N);
+            Filtro filtro( _ventana );
             float media, _dato;
             do{
               getline(archivo, path);
