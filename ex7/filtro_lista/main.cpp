@@ -4,8 +4,9 @@
 
 using namespace std;
 
-int main(int argc, char** argv)
-{
+int main(int argc, char** argv){
+
+    int _ventana = 3;
     cout << "Probando un filtro de media de tamaño n." << endl;
 
     // El problema es abrir un archivo y guardar los resultados en otro.
@@ -16,6 +17,8 @@ int main(int argc, char** argv)
         cout << "The file with the output will be placed in the same folder." << endl;
         return -1;
     }
+
+    if(argc == 3 ) _ventana = atoi( argv[2] );
 
     string path = argv[1];
     ifstream archivo;
@@ -28,14 +31,14 @@ int main(int argc, char** argv)
         ofstream archSal;
         archSal.open("output.txt");
         if( archSal.is_open() ){
-            Filtro filtro(9);
+            Filtro filtro( _ventana );
             float media, _dato;
             do{
               getline(archivo, path);
               _dato = atof( path.c_str() ) ;
               media = filtro.promedio();
               filtro.agregarDato( _dato );
-              _dato -= media;
+              _dato = media;
               archSal << _dato << endl;
             }while(!archivo.eof());
             archSal.close();

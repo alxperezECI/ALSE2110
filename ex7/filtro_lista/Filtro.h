@@ -7,13 +7,13 @@
 #include "Dato.h"
 
 class Filtro {
-public:  
+  public:
     Filtro(int tamano);
     void agregarDato(float a);
     void setTamano(int a){_tamano = a;}
     int  getTamano(){ return _tamano;}
     float promedio();
-private: 
+  private:
     int _tamano;
     Dato* _cabezaFiltro;
 };

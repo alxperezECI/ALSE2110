@@ -7,13 +7,13 @@
 #define _DATO_H
 
 class Dato {
-public: 
+  public:
     Dato();
     Dato(float a);
     Dato* getSig();
     void setSig(Dato* a);
     float getDato();
-private: 
+  private:
     float _dato;
     Dato *_siguiente;
 };

@@ -21,6 +21,7 @@ Filtro::Filtro(int tamano){
 void Filtro::agregarDato(float a) {
     Dato *ptr = _cabezaFiltro;
     int tam = 1;
+
     if( ptr == NULL )
         _cabezaFiltro = new Dato( a );
     else{
