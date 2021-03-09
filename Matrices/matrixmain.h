@@ -15,6 +15,12 @@ public:
     explicit MatrixMain(QWidget *parent = 0);
     ~MatrixMain();
 
+
+private slots:
+    void on_btnOperar_clicked();
+
+    void on_txtM1_11_textChanged(const QString &arg1);
+
 private:
     Ui::MatrixMain *ui;
 };
