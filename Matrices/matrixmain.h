@@ -2,6 +2,9 @@
 #define MATRIXMAIN_H
 
 #include <QMainWindow>
+#include <eigen3/Eigen/Dense>
+
+using Eigen::Matrix2d;
 
 namespace Ui {
 class MatrixMain;
@@ -23,6 +26,8 @@ private slots:
 
 private:
     Ui::MatrixMain *ui;
+
+
 };
 
 #endif // MATRIXMAIN_H
