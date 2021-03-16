@@ -1,6 +1,7 @@
 #include "matrixmain.h"
 #include "ui_matrixmain.h"
 #include <QString>
+#include "divi_dialog.h"
 #include <eigen3/Eigen/Dense>
 
 MatrixMain::MatrixMain(QWidget *parent) :
@@ -38,17 +39,24 @@ void MatrixMain::on_btnOperar_clicked(){
         case 2: // Multiplicación
             mr = m1 * m2;
             break;
-        case 3: // Multiplicar por inversa de m2
-            mr = m1 * m2.inverse();
+        case 3: // Abrir ventana de dialogo de opciones de división
+            Divi_dialog dia;
+            connect( &dia, &Divi_dialog::pasaparametros, this, &MatrixMain::recibeparametros );
+            dia.show();
+            dia.exec();
             break;
-        default:
-        break;
     }
 
     ui->txtMR_11->setText( QString::number( mr(0,0) ) );
     ui->txtMR_12->setText( QString::number( mr(0,1) ) );
     ui->txtMR_21->setText( QString::number( mr(1,0) ) );
     ui->txtMR_22->setText( QString::number( mr(1,1) ) );
+
+}
+
+void MatrixMain::recibeparametros(int tipo, double esc){
+
+// Aquí se va a realizar la división de las matrices.
 
 }
 
